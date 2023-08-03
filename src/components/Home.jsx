@@ -12,7 +12,7 @@ const Home = () => {
                     I'm a Full Stack Developer
                 </h2>
                 <p>
-                    Filler paragraph, talk about experience, what I'm looking for, strongest technologies
+                    Filler paragraph, talk about experience, what I'm looking for, strongest technologies and stuff
                 </p>
                 <div>
                     <button>
