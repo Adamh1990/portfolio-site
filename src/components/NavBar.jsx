@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {AiOutlineBars} from 'react-icons/ai';
 import {FaTimes} from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -32,7 +33,7 @@ const NavBar = () => {
     <div className="flex justify-between items-center w-full h-20 px-4 text-rose-500 bg-gray-800 fixed"> 
     {/* size and color of navbar header  */}
         <div>
-            <h1 className="text-5xl font-signature ml-2 text-cyan-600">Adam</h1>
+            <h1 className="text-5xl font-signature ml-2 text-cyan-600">Adam Hunt</h1>
         </div>
     {/* size/color/location of my name in the navbar */}
         <ul className="hidden md:flex">
@@ -42,7 +43,8 @@ const NavBar = () => {
                     key={id}
                     className="px-4 cursor-pointer capitalize font-medium text-lg hover:scale-110 duration-200"
                 >
-                    {link}
+                  <Link to={link} smooth duration={500}>{link}
+                  </Link>
                 </li>
     /* this is where the navbar array of links is plugged in using map() to layout everything almost automatically, far less work than doing everything one-by-one */
             ))}
@@ -50,7 +52,7 @@ const NavBar = () => {
         <div
             onClick={() => setNav(!nav)}
     /* when the bar menu is clicked, it will switch the opposite of its current state. closed -> open, open -> closed */
-            className="cursor-pointer pr-4 z-10 text-green-500 md:hidden"
+            className="cursor-pointer pr-4 z-10 text-rose-500 md:hidden"
         >
             {nav ? <FaTimes size={30} /> : <AiOutlineBars size={30} />}
     {/* When the bar menu is clicked, and in the opposite of its default(closed) state, the bars will become an 'x', clicked again, it returns to the bars */}
@@ -63,7 +65,10 @@ const NavBar = () => {
                     key={id}
                     className="px-4 cursor-pointer capitalize py-6 text-4xl"
                 >
-                    {link}
+                  <Link 
+                    onClick={() => setNav(!nav)}
+                    to={link} smooth duration={500}>{link}
+                  </Link>
                 </li>
             ))}
     {/* using the same map() setup as above to display the array of objects in the bar drop-down */}
