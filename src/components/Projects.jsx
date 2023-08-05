@@ -34,7 +34,7 @@ const Projects = () => {
 // "Header" of the section    
     <div 
     name="projects" 
-    className="bg-gradient-to-b from-green-800 via-green-800 to-teal-950 w-full text-white md:h-screen">
+    className="bg-gradient-to-b bg-gray-900 w-full text-white md:h-screen">
 
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
             <div className="pb-8">
@@ -50,7 +50,7 @@ const Projects = () => {
                     src={src} 
                     alt="" 
                     className="rounded-md duration-200 hover:scale-105"/>
-                    <div className="flex items-center justify-center">
+                    <div className="bg-gray-800 rounded-md flex items-center justify-center">
                         <button 
                         className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">Demo</button>
                         <button 
