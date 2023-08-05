@@ -51,6 +51,7 @@ const Social = () => {
                 {links.map(({ id, child, href, style, download }) => (
                     <li 
                     key={id} 
+                    // eslint-disable-next-line no-useless-concat
                     className={"flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" + " " + style
                     }
                     >
